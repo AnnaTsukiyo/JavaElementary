@@ -1,13 +1,13 @@
 package com.savchenko.homeworks.hometask1;
 
+import java.util.Scanner;
+
 /**
  * 2. Heron's formula to calculate area of triangle:
  * S = √p*(p-a)*(p-b)*(p-c))
  * where p = a+b+c / 2 - half-perimeter of the triangle.
  * Example: a=3, b=4, c =5 Result: 6.0
  */
-
-import java.util.Scanner;
 
 public class Task2 {
 
