@@ -23,7 +23,7 @@ public class Task2 {
         System.out.println("The area of a triangle is " + triangleArea(s1, s2, s3));
     }
 
-    public static double triangleArea(double s1, double s2, double s3) {
+    private static double triangleArea(double s1, double s2, double s3) {
 
         double p = (s1 + s2 + s3) / 2.0d;
         double s = Math.sqrt(p * (p - s1) * (p - s2) * (p - s3));
