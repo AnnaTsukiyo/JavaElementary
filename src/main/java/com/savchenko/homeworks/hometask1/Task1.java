@@ -21,10 +21,9 @@ public class Task1 {
         System.out.println("Logarithm of the number " + b + " to the base " + a + " = " + logarithmCalc(a, b));
     }
 
-    private static int logarithmCalc(int a, int b) {
+    private static double logarithmCalc(int a, int b) {
 
-        int result = (int) (Math.log10(b) / Math.log10(a));
-        return result;
+        return  Math.log10(b) / Math.log10(a);
     }
 }
 
