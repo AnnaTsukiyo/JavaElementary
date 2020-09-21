@@ -39,6 +39,7 @@ public class OperatorsErrors {
         byte b1 = 1;
         byte b2 = 2;
      //   byte b3 = b1 + b2; // possible lossy conversion from int to byte
+
         //Operators - Example2
 
         int i = 123456789;
