@@ -32,7 +32,7 @@ public class Order {
         return price;
     }
 
-    public Date setDeliveryDate() {
+    public Date setDeliveryDate(Date deliveryDate) {
         return deliveryDate;
     }
 
@@ -48,15 +48,17 @@ public class Order {
         return price;
     }
 
-    public Date getDeliveryDate(Date deliveryDate) {
+     public Date getDeliveryDate() {
         return deliveryDate;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (this == o){
+            return true;}
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Order that = (Order) o;
         return Objects.equals(this.item, that.item)
                 && Objects.equals(this.size, that.size)
