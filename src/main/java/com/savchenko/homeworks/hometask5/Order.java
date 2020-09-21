@@ -32,7 +32,7 @@ public class Order {
         return price;
     }
 
-    public Date setDeliveryDate(String date) {
+    public Date setDeliveryDate() {
         return deliveryDate;
     }
 
