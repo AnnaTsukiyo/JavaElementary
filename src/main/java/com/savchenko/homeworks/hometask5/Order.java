@@ -2,6 +2,10 @@ package com.savchenko.homeworks.hometask5;
 
 import java.util.Date;
 
+/**
+ * Creat POJO Order, which has the following: item, deliveryDate(class Date), size, price
+ * */
+
 public class Order {
     private String item;
     private double size;
@@ -61,4 +65,3 @@ public class Order {
     }
 
 }
-
