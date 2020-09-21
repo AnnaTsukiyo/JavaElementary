@@ -20,8 +20,8 @@ public class OperatorsErrors {
         String s2 = 2 + 2 + "abc";
         System.out.println(s2);// s2 = 4abc
         long lVal = 1000; //an acceptable variant
-        int iVal = lVal; //
-        System.out.println(ival); // error: incompatible types: possible lossy conversion from long to int
+       // int iVal = lVal; //
+       // System.out.println(ival); // error: incompatible types: possible lossy conversion from long to int
         int iVal2 = (int) lVal; // an acceptable variant
         double h = 3.14159265359;
         float g = (float) h; // possible irrelevance
@@ -38,7 +38,7 @@ public class OperatorsErrors {
         System.out.println(total); // incompatible types: possible lossy conversion from int to byte
         byte b1 = 1;
         byte b2 = 2;
-        byte b3 = b1 + b2; // possible lossy conversion from int to byte
+     //   byte b3 = b1 + b2; // possible lossy conversion from int to byte
 
         //Operators - Example2
 

@@ -11,17 +11,17 @@ public class BlocksAndFlowControlErrors {
 
 
     public class BlockDemo {
-        static int a = 0; // error! variable a is within class visibility /Inner classes cannot have static declarations
+   //     static int a = 0; // error! variable a is within class visibility /Inner classes cannot have static declarations
     }
 
     public static void main(String[] args) {
         int a = 1; // defining the variable, is not acceptable!
         {
             a = 2; // acceptable
-            int a = 3; // Error: already defined in the scope
+      //      int a = 3; // Error: already defined in the scope
             int b = 4; // acceptable
         }
-        b = 5; // Error: cannot resolve symbol 'b'
+     //   b = 5; // Error: cannot resolve symbol 'b'
         int b = 6; // acceptable
 
         //Flow Control: for loop
@@ -43,4 +43,3 @@ public class BlocksAndFlowControlErrors {
 
     }
 }
-
