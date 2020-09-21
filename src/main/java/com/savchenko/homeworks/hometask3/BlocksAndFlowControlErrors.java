@@ -22,6 +22,10 @@ public class BlocksAndFlowControlErrors {
             int b = 4; // acceptable
         }
      //   b = 5; // Error: cannot resolve symbol 'b'
+            int a = 3; // Error: already defined in the scope
+            int b = 4; // acceptable
+        }
+     //   b = 5; // Error: cannot resolve symbol 'b'
         int b = 6; // acceptable
 
         //Flow Control: for loop

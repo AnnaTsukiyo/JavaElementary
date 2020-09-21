@@ -91,5 +91,3 @@ public class OperatorsErrors {
         System.out.println("c is NaN: " + Double.isNaN(c)); //  c is NaN: true
 
     }
-}
-
