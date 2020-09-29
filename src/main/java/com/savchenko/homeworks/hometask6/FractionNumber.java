@@ -10,14 +10,15 @@ import java.util.Objects;
  * Make this data type immutable
  */
 
-public class FractionNumber {
+public class FractionNumber implements Fraction {
 
     private final int numerator;
     private final int denominator;
 
     public FractionNumber(int numerator, int denominator) {
-        if (denominator == 0)
-            throw new ArithmeticException("Divide by zero: Denominator for Fraction is zero.");
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Divide by zero: Denominator for Fraction is zero.");
+        }
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -29,51 +30,69 @@ public class FractionNumber {
     public int getDenominator() {
         return this.denominator;
     }
-    public static FractionNumber negative (FractionNumber frac)
-    {
-        return new FractionNumber(-frac.getNumerator(), frac.getDenominator());
-    }
-    public FractionNumber negative()
-    {
-        return new FractionNumber(-numerator, denominator);
-    }
 
-        public FractionNumber minus(FractionNumber frac) {
-        return new FractionNumber(numerator * frac.getDenominator()
-                - denominator * frac.getNumerator(),
-                denominator * frac.getDenominator());
-    }
-
-    public FractionNumber multiply(FractionNumber frac) {
-        return new FractionNumber(numerator * frac.getNumerator(),
-                denominator * frac.getDenominator());
-    }
-
-    public FractionNumber divide(FractionNumber other) {
-        int n = numerator * other.denominator;
-        int d = denominator * other.numerator;
-        return new FractionNumber(n, d);
-    }
-
-    public int compareTo(FractionNumber other) {
-        int myCommon = numerator * other.denominator;
-        int otherCommon = other.numerator * denominator;
-        return myCommon - otherCommon;
+    @Override
+    public Fraction plus(Fraction other) {
+        int numerator = getNumerator() * other.getDenominator() + other.getNumerator() * getDenominator();
+        int denominator = getDenominator() * other.getDenominator();
+        if (denominator % numerator == 0) {
+            denominator = denominator / numerator;
+            numerator = numerator / numerator;
+        }
+        return new FractionNumber(numerator, denominator);
     }
 
     @Override
-    public boolean equals(Object frac) {
-        if (frac == null) {
+    public Fraction minus(Fraction other) {
+        int numerator = getNumerator() * other.getDenominator() - other.getNumerator() * getDenominator();
+        int denominator = getDenominator() * other.getDenominator();
+        if (denominator % numerator == 0) {
+            denominator = denominator / numerator;
+            numerator = numerator / numerator;
+        }
+        return new FractionNumber(numerator, denominator);
+    }
+
+    @Override
+    public Fraction divide(Fraction other) {
+
+        int numerator = getNumerator() * other.getDenominator();
+        int denominator = getDenominator() * other.getNumerator();
+        if (denominator % numerator == 0) {
+            denominator = denominator / numerator;
+            numerator = numerator / numerator;
+        }
+        return new FractionNumber(numerator, denominator);
+    }
+
+    @Override
+    public Fraction multiply(Fraction other) {
+        int numerator = getNumerator() * other.getNumerator();
+        int denominator = getDenominator() * other.getDenominator();
+        if (denominator % numerator == 0) {
+            denominator = denominator / numerator;
+            numerator = numerator / numerator;
+        }
+        return new FractionNumber(numerator, denominator);
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) {
             return false;
         }
-        return frac instanceof FractionNumber
-                && numerator == ((FractionNumber) frac).getNumerator()
-                && denominator == ((FractionNumber) frac).getDenominator();
+        if (!getClass().equals(object.getClass())) {
+            return false;
+        }
+        final Fraction other = (Fraction) object;
+        return getNumerator() / (double) getDenominator()
+                == other.getNumerator() / (double) other.getDenominator();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numerator, denominator);
+        double result = (double) numerator / (double) denominator;
+        return Objects.hash(result);
     }
 
     @Override
