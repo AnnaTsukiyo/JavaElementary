@@ -34,7 +34,7 @@ public class Task3 {
         equationSolution(a, b, c);
     }
 
-    public static double equationSolution(double a, double b, double c) {
+    private static double equationSolution(double a, double b, double c) {
         double arr[] = new double[2];
         double result = b * b - 4.0 * a * c;
         if (result > 0.0) {
