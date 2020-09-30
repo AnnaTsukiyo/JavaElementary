@@ -1,3 +1,5 @@
+
+
 package com.savchenko.homeworks.hometask3;
 
 /**
@@ -90,4 +92,5 @@ public class OperatorsErrors {
         System.out.println("c == NaN: " + (c == Double.NaN)); // :))) // c == NaN: false
         System.out.println("c is NaN: " + Double.isNaN(c)); //  c is NaN: true
 
-    }
+
+
