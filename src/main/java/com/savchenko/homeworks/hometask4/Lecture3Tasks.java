@@ -1,6 +1,5 @@
 package com.savchenko.homeworks.hometask4;
 
-
 import java.util.Scanner;
 
 /**
@@ -95,5 +94,3 @@ public class Lecture3Tasks {
         System.out.println();
         return temp;
     }
-
-
