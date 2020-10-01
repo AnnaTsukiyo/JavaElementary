@@ -1,6 +1,5 @@
 package com.savchenko.homeworks.hometask5;
 
-
 public class Order {
 
 import java.util.Date;
