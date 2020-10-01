@@ -1,12 +1,13 @@
 package com.savchenko.homeworks.hometask8;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Author {
 
-    private static String firstName;
-    private static String lastName;
-    private static Date dateOfBirth;
+    private final String firstName;
+    private final String lastName;
+    private final Date dateOfBirth;
 
     public Author(String firstName, String lastName, Date dateOfBirth) {
 
@@ -15,26 +16,31 @@ public class Author {
         this.dateOfBirth = new Date(dateOfBirth.getTime());
     }
 
-    public static String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public static String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public static Date getDateOfBirth() {
+    public Date getDateOfBirth() {
         return new Date(dateOfBirth.getTime());
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return firstName.equals(author.firstName) &&
+                lastName.equals(author.lastName) &&
+                dateOfBirth.equals(author.dateOfBirth);
     }
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(firstName, lastName, dateOfBirth);
     }
 
     @Override
