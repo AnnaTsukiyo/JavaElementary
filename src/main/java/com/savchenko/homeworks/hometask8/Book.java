@@ -12,14 +12,14 @@ import java.util.Objects;
  */
 public final class Book {
 
-    private static Genre genre;
+    private Genre genre;
     private final Author author;
     private final Date issueDate;
     private final Long isbn;
 
     public Book(Author author, Date issueDate, Genre genre, Long isbn) {
         this.author = author;
-        this.issueDate = issueDate;
+        this.issueDate = new Date(issueDate.getTime());
         this.genre = genre;
         this.isbn = isbn;
     }
@@ -29,7 +29,7 @@ public final class Book {
     }
 
     public Date getIssueDate() {
-        return issueDate;
+        return new Date(issueDate.getTime());
     }
 
     public Genre getGenre() {
