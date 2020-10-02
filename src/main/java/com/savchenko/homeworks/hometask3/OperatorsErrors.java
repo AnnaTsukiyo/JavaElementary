@@ -1,5 +1,6 @@
 
 
+
 package com.savchenko.homeworks.hometask3;
 
 /**
@@ -95,3 +96,4 @@ public class OperatorsErrors {
 
     }
 }
+

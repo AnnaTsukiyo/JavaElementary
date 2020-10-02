@@ -2,6 +2,7 @@ package com.savchenko.homeworks.hometask5;
 
 public class Order {
 
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -80,5 +81,6 @@ public class Order {
                 ", date of delivery = '" + deliveryDate + '\'' +
                 '}';
     }
+
 
 }
