@@ -14,3 +14,4 @@ public enum Genre {
 
     private final String displayName;
 }
+

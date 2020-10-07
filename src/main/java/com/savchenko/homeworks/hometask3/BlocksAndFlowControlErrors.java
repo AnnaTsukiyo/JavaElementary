@@ -23,7 +23,7 @@ public class BlocksAndFlowControlErrors {
         }
      //   b = 5; // Error: cannot resolve symbol 'b'
 
-
+      
         int b = 6; // acceptable
 
         //Flow Control: for loop
