@@ -18,6 +18,7 @@ class CovidStatTest {
 
         people = new ArrayList<>(List.of(
                 new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
+                new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
                 new Person.PersonBuilder().name("Alex").surname("Ryan").age(34).height(160).weight(67).mail("bobryan@gmail.com").build(),
                 new Person.PersonBuilder().name("Anna").surname("Aleksandrova").age(40).height(167).weight(76).mail("anna.alexeenko@mail.ru").build(),
                 new Person.PersonBuilder().name("Andrew").surname("Tiram").age(35).height(171).weight(78).mail("andrewtiram@mail.ru").build(),
