@@ -16,7 +16,7 @@ public class Cat {
       ArrayList<Mouse> mice = new ArrayList<>(belly);
         Collections.sort(mice);
         belly.removeFirst();
-        System.out.println("The mouse %s is removed");
+        System.out.println("The mouse is removed");
     }
 
     private HashSet takingLaxative() {
