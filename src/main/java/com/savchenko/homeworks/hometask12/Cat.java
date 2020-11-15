@@ -13,9 +13,11 @@ public class Cat {
         System.out.printf("The mouse %s is added to belly%n", mouse.getName());
     }
 
-    void miceRemovingFromOrganism(Mouse mouse) {
+    void miceRemovingFromOrganism() {
+        ArrayList<Mouse> mice = new ArrayList<>(belly);
+        Collections.sort(mice);
         belly.removeFirst();
-        System.out.printf(String.format("The mouse %s is removed", mouse.getName()));
+        System.out.println("The mouse %s is removed");
     }
 
     private HashSet takingLaxative() {
