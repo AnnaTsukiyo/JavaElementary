@@ -34,7 +34,6 @@ public class Main {
             System.out.println("An average number is : " + average2);
             LocalDateTime now3 = LocalDateTime.now();
             System.out.printf("The program with four threads ran for : %dmilliseconds%n %n ", MILLIS.between(now2, now3));
-
         }
     }
 }
