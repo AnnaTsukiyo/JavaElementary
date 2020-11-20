@@ -29,22 +29,25 @@ public class MultiThreadsAverageResult {
     }
 
     public static double multiThreadAverage(int[] arrayOfNumbers) throws InterruptedException {
-
-        ThreadMultiply t1 = new ThreadMultiply(arrayOfNumbers, 0, arrayOfNumbers.length / 4);
+ThreadMultiply t1 = new ThreadMultiply(arrayOfNumbers, 0, arrayOfNumbers.length / 4);
+        Thread thread1 = new Thread(t1);
         ThreadMultiply t2 = new ThreadMultiply(arrayOfNumbers, arrayOfNumbers.length / 4, arrayOfNumbers.length / 2);
-        ThreadMultiply t3 = new ThreadMultiply(arrayOfNumbers, arrayOfNumbers.length / 2, 3 + arrayOfNumbers.length / 4);
+        Thread thread2 = new Thread(t2);
+        ThreadMultiply t3 = new ThreadMultiply(arrayOfNumbers, arrayOfNumbers.length / 2, arrayOfNumbers.length / 4);
+        Thread thread3 = new Thread(t3);
         ThreadMultiply t4 = new ThreadMultiply(arrayOfNumbers, arrayOfNumbers.length / 4, arrayOfNumbers.length);
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
+        Thread thread4 = new Thread(t4);
+        thread1.start();
+        thread2.start();
+        thread3.start();
+        thread4.start();
 
         try {
-            t1.join();
-            t2.join();
-            t3.join();
-            t4.join();
-        } catch (Exception e) {
+            thread1.join();
+            thread2.join();
+            thread3.join();
+            thread4.join();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
         double finalResult = t1.getResult() + t2.getResult() + t3.getResult() + t4.getResult() / 4;
