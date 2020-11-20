@@ -21,13 +21,8 @@ public class ThreadMultiply implements Runnable {
     public void run() {
         double sum;
         for (int i = first; i <= last; i++) {
-            sum = result + array[i];
+            sum = sum + array[i];
         }
-        sum = result / (last - first);
-    }
-
-    public void start() {
-    }
-    public void join() {
+        result = sum / (last - first);
     }
 }
