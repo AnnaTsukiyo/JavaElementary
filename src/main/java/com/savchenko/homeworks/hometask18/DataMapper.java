@@ -1,4 +1,4 @@
-package com.savchenko.homeworks.hometask16;
+package com.savchenko.homeworks.hometask18;
 
 public class DataMapper {
 

@@ -1,23 +1,24 @@
-package com.savchenko.homeworks.hometask16;
+package com.savchenko.homeworks.hometask18;
 
 import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DataProviderTest {
+class DataProviderDatTest {
 
     @Test
     void provideWithNotExistingFile() {
-        List<Person> personList = new DataProvider().provide("Not_Existing_File");
+        List<Person> personList = new DataProviderCsv().provide("Not_Existing_File");
         assertNotNull(personList);
         assertTrue(personList.isEmpty());
     }
 
     @Test
     void provide() throws IOException {
-        List<Person> personList = new DataProvider().provide("./src/test/resources/data.csv");
+        List<Person> personList = new DataProviderCsv().provide("./src/test/resources/data.dat");
         assertNotNull(personList);
         assertFalse(personList.isEmpty());
     }
