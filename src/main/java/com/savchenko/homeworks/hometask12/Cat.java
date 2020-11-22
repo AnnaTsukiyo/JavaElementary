@@ -15,9 +15,8 @@ public class Cat {
 
       ArrayList<Mouse> mice = new ArrayList<>(belly);
         Collections.sort(mice);
-        belly.removeFirst();
-        System.out.println("The mouse is removed");
-    }
+
+    void miceRemovingFromOrganism(BlockingDeque<Mouse> belly) {
 
     private HashSet takingLaxative() {
         substance.addAll(belly);
@@ -26,3 +25,10 @@ public class Cat {
         return substance;
     }
 }
+    private void takingLaxative(HashSet<String> substance) {
+        substance.clear();
+        System.out.println("The mice are removed from the belly. Now you can eat a few fresh mice if you are hungry!");
+    }
+}
+
+

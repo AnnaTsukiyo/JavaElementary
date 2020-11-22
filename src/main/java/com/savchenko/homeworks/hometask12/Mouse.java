@@ -9,6 +9,7 @@ import lombok.*;
 
 public class Mouse implements Comparable<Mouse> {
 
+
     private String name;
     private int numberOfKilocalories;
 

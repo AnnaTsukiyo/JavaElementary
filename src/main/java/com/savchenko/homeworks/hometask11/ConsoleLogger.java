@@ -1,6 +1,5 @@
 package com.savchenko.homeworks.hometask11;
 
-import org.apache.log4j.lf5.LogLevel;
 
 public class ConsoleLogger extends Logger {
 
