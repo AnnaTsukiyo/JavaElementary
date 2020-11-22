@@ -1,11 +1,13 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.HashSet;
+import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * Rewrite  the previous homework so that the least-calorie mice are digested first
  **/
 
+public class Main {
 
         Mouse mouse1 = new Mouse("Jerry", 460);
         Mouse mouse2 = new Mouse("Jane", 245);
@@ -27,4 +29,3 @@ import java.util.HashSet;
 
     }
 }
-
