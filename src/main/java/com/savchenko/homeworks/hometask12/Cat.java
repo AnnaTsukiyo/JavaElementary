@@ -1,28 +1,28 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.*;
-import java.util.concurrent.LinkedBlockingDeque;
+
+import java.util.concurrent.BlockingDeque;
 
 public class Cat {
 
-    LinkedBlockingDeque<Mouse> belly = new LinkedBlockingDeque<>(5);
-    HashSet<Mouse> substance;
-
-    void eat(Mouse mouse) {
-        belly.addFirst(mouse);
-        System.out.printf("The mouse %s is added to belly%n", mouse.getName());
+    void eat(BlockingDeque<Mouse> belly, Mouse mouse) {
+        if (belly.size() < 5) {
+            belly.addFirst(mouse);
+            System.out.println("The mouse is added to belly");
+        } else {
+            System.out.println("Error!The belly is full, glutton");
+        }
     }
 
-    void miceRemovingFromOrganism(Mouse mouse) {
+    void miceRemovingFromOrganism(BlockingDeque<Mouse> belly) {
         belly.removeFirst();
-        System.out.printf(String.format("The mouse %s is removed", mouse.getName()));
+        System.out.println("The mouse is removed");
     }
 
-    private HashSet takingLaxative() {
-        substance.addAll(belly);
-        belly.clear();
+    private void takingLaxative(HashSet<String> substance) {
+        substance.clear();
         System.out.println("The mice are removed from the belly. Now you can eat a few fresh mice if you are hungry!");
-        return substance;
     }
 }
 
