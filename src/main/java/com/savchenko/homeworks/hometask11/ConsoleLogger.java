@@ -1,5 +1,6 @@
 package com.savchenko.homeworks.hometask11;
 
+
 public class ConsoleLogger extends Logger {
 
     @java.lang.Override
