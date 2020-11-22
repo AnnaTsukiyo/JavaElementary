@@ -1,6 +1,7 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.*;
+
 import java.util.concurrent.BlockingDeque;
 
 public class Cat {
@@ -24,3 +25,4 @@ public class Cat {
         System.out.println("The mice are removed from the belly. Now you can eat a few fresh mice if you are hungry!");
     }
 }
+

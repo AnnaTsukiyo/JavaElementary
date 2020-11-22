@@ -2,6 +2,7 @@ package com.savchenko.homeworks.hometask11;
 
 import java.io.*;
 
+
 public class FileLogger extends Logger {
 
     @java.lang.Override
