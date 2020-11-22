@@ -1,7 +1,5 @@
 package com.savchenko.homeworks.hometask11;
 
-import org.apache.log4j.lf5.LogLevel;
-
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
