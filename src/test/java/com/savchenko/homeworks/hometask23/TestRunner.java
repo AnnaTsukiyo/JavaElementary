@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 public class TestRunner {
     public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException {
 
-        Class cl = Class.forName("com.savchenko.homeworks.hometask23.FractionMyTest");
+        Class cl = Class.forName("com/savchenko/homeworks/hometask23/FractionMyTest.java");
 
         Method[] method = cl.getMethods();
         for (Method md : method) {
