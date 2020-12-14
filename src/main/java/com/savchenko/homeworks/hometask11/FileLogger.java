@@ -1,8 +1,6 @@
 package com.savchenko.homeworks.hometask11;
 
-import org.apache.log4j.lf5.LogLevel;
 import java.io.*;
-import static org.apache.log4j.lf5.LogLevel.INFO;
 
 public class FileLogger extends Logger {
 

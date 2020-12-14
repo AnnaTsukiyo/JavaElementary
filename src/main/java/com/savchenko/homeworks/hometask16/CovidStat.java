@@ -66,4 +66,5 @@ public class CovidStat {
         personList.forEach(p-> sum[0] = getAttribute.apply(p));
         return (double) sum[0] / personList.size();
     }
+
 }

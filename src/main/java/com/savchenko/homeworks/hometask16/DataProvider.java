@@ -13,7 +13,9 @@ public class DataProvider {
     public List<Person> provide(String fileName) {
         ArrayList<Person> result = new ArrayList<>();
         List<String> personsData = readDataFromFile(fileName);
+
         personsData.forEach(e -> result.add(mapper.map(e)));
+
         return result;
     }
 
