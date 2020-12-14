@@ -1,8 +1,5 @@
-package com.savchenko.homeworks.hometask18;
+package com.savchenko.homeworks.hometask18.hometask18;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,7 +23,6 @@ public class DataProviderCsv implements DataProvider {
      //   for (String s : personsData) {
      //       result.add(mapper.map(s));
       //  }
-
         return result;
     }
 }

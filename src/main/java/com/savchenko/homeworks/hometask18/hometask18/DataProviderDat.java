@@ -1,7 +1,6 @@
-package com.savchenko.homeworks.hometask18;
+package com.savchenko.homeworks.hometask18.hometask18;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
@@ -12,7 +11,6 @@ public class DataProviderDat implements DataProvider {
     public List<Person> provide(String fileName) {
 
         List<Person> userList = new ArrayList<>();
-
         try {
             FileInputStream fileInputStream = new FileInputStream(".src/test/resources/data.dat");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);

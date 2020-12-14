@@ -13,10 +13,12 @@ public class Cat {
         System.out.printf("The mouse %s is added to belly%n", mouse.getName());
     }
 
-      ArrayList<Mouse> mice = new ArrayList<>(belly);
+    void miceRemovingFromOrganism() {
+        ArrayList<Mouse> mice = new ArrayList<>(belly);
         Collections.sort(mice);
-
-    void miceRemovingFromOrganism(BlockingDeque<Mouse> belly) {
+        belly.removeFirst();
+        System.out.println("The mouse is removed");
+    }
 
     private HashSet takingLaxative() {
         substance.addAll(belly);
