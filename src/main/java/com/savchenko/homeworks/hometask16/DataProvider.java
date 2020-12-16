@@ -8,14 +8,14 @@ import java.util.List;
 
 public class DataProvider {
 
-    private DataMapper mapper = new DataMapper();
+    private final DataMapper mapper = new DataMapper();
 
     public List<Person> provide(String fileName) {
         ArrayList<Person> result = new ArrayList<>();
         List<String> personsData = readDataFromFile(fileName);
-        for (String s : personsData) {
-            result.add(mapper.map(s));
-        }
+
+        personsData.forEach(e -> result.add(mapper.map(e)));
+
         return result;
     }
 
