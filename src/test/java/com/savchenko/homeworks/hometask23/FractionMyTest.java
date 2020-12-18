@@ -25,7 +25,6 @@ public class FractionMyTest {
         assertEquals(new FractionNumber(1, 3), fraction1);
         assertEquals(new FractionNumber(2, 3), fraction1);
         //       assertEquals(new FractionNumber(3, 4), new FractionNumber(1, 4));
-
     }
 
     @MyTest
