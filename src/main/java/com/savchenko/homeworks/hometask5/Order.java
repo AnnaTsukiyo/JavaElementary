@@ -1,9 +1,5 @@
 package com.savchenko.homeworks.hometask5;
 
-public class Order {
-
-
-
 import java.util.Date;
 import java.util.Objects;
 
@@ -52,14 +48,15 @@ public class Order {
         return price;
     }
 
-     public Date getDeliveryDate() {
+    public Date getDeliveryDate() {
         return deliveryDate;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
-            return true;}
+        if (this == o) {
+            return true;
+        }
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
@@ -73,7 +70,7 @@ public class Order {
     public int hashCode() {
         return Objects.hash(item, size, price, deliveryDate);
     }
-    
+
     public String toString() {
         return "Order {" +
                 "item = '" + item + '\'' +
@@ -82,4 +79,4 @@ public class Order {
                 ", date of delivery = '" + deliveryDate + '\'' +
                 '}';
     }
-
+}

@@ -20,8 +20,6 @@ public final class SoldCarsStorage {
     }
 
     void printListOfCars() {
-        for (int key : inventory.keySet()) {
-            System.out.println(inventory.get(key).toString());
-        }
+        inventory.forEach((k, v) -> System.out.println(inventory.get(k).toString()));
     }
 }
