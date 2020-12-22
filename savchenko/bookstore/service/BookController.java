@@ -41,7 +41,7 @@ public class BookController {
     }
 
     @RequestMapping(value = "/book", method = RequestMethod.POST)
-    public ResponseEntity<?> createBook(@RequestBody Book book,
+    public ResponseEntity<?> addBook(@RequestBody Book book,
                                         UriComponentsBuilder ucBuilder) {
 
         bookService.addBook(book);
