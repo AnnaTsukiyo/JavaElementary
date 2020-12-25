@@ -18,12 +18,12 @@ class CovidStatTest {
 
         people = new ArrayList<>(List.of(
 
-                new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).email("anna_salvatore@gmail.com").build(),
-                new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).email("anna_salvatore@gmail.com").build(),
-                new Person.PersonBuilder().name("Alex").surname("Ryan").age(34).height(160).weight(67).email("bobryan@gmail.com").build(),
-                new Person.PersonBuilder().name("Anthony").surname("Leto").age(40).height(167).weight(76).email("anna.alexeenko@mail.ru").build(),
-                new Person.PersonBuilder().name("Andrew").surname("Tiram").age(35).height(171).weight(78).email("andrewtiram@mail.ru").build(),
-                new Person.PersonBuilder().name("Alex").surname("Leto").age(25).height(182).weight(99).email("bobleto@mail.ru").build()));
+                new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
+                new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
+                new Person.PersonBuilder().name("Alex").surname("Ryan").age(34).height(160).weight(67).mail("bobryan@gmail.com").build(),
+                new Person.PersonBuilder().name("Anna").surname("Aleksandrova").age(40).height(167).weight(76).mail("anna.alexeenko@mail.ru").build(),
+                new Person.PersonBuilder().name("Andrew").surname("Tiram").age(35).height(171).weight(78).mail("andrewtiram@mail.ru").build(),
+                new Person.PersonBuilder().name("Alex").surname("Leto").age(25).height(182).weight(99).mail("bobleto@mail.ru").build()));
 
         stat = new CovidStatImpl(people);
     }
@@ -34,18 +34,9 @@ class CovidStatTest {
     }
 
     @Test
-    void getMostPopularSurname() {
-        assertEquals("Leto", stat.getMostPopularSurname());
-    }
-
-    @Test
-    void getMostPopularDomain() {
-        assertEquals("gmail.com", stat.getMostPopularDomain());
-    }
-
-    @Test
     void getAverageAge() {
-        assertEquals(31, stat.getAverageAge());
+        assertEquals(32, stat.getAverageAge());
+
     }
 
     @Test
@@ -55,6 +46,7 @@ class CovidStatTest {
 
     @Test
     void getAverageWeight() {
-        assertEquals(90.0, stat.getAverageWeight());
+        assertEquals(86, stat.getAverageWeight());
+
     }
 }

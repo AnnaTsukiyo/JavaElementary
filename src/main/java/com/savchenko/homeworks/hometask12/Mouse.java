@@ -7,7 +7,7 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 
-public class Mouse implements Comparable<Mouse> {
+public class Mouse {
 
     private String name;
     private int numberOfKilocalories;
@@ -16,9 +16,9 @@ public class Mouse implements Comparable<Mouse> {
         this.name = name;
         this.numberOfKilocalories = numberOfKilocalories;
     }
-
     @Override
     public int compareTo(Mouse o) {
         return getNumberOfKilocalories() - o.getNumberOfKilocalories();
     }
+
 }
