@@ -21,3 +21,4 @@ public class BookStoreApplication {
         return new ValidatorService("validation service");
     }
 }
+
