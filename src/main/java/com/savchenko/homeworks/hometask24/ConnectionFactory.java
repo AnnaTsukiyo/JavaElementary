@@ -1,4 +1,4 @@
-package com.savchenko.homeworks.hometask24;
+lpackage com.savchenko.homeworks.hometask24;
 
 import java.sql.*;
 
@@ -7,7 +7,7 @@ public class ConnectionFactory {
     private static final String DB_USER_NAME = "root";
     private static final String DB_USER_PASS = "password";
     private static final String DB_USER_HOST = "localhost";
-    private static final String DB_USER_DATABASE = "hillel";
+    private static final String DB_USER_DATABASE = "employees";
 
     static {
         try {
