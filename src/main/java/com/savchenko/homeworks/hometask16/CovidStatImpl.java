@@ -31,6 +31,7 @@ public class CovidStatImpl implements CovidStat {
     }
 
     @Override
+
     public double getAverageAge() {
         double sumOfAges = 0;
         for (Person person : persons) {

@@ -17,6 +17,7 @@ class CovidStatTest {
     void setUp() {
 
         people = new ArrayList<>(List.of(
+
                 new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
                 new Person.PersonBuilder().name("Anna").surname("Salvatore").age(26).height(170).weight(110).mail("anna_salvatore@gmail.com").build(),
                 new Person.PersonBuilder().name("Alex").surname("Ryan").age(34).height(160).weight(67).mail("bobryan@gmail.com").build(),
@@ -35,6 +36,7 @@ class CovidStatTest {
     @Test
     void getAverageAge() {
         assertEquals(32, stat.getAverageAge());
+
     }
 
     @Test
@@ -45,5 +47,6 @@ class CovidStatTest {
     @Test
     void getAverageWeight() {
         assertEquals(86, stat.getAverageWeight());
+
     }
 }

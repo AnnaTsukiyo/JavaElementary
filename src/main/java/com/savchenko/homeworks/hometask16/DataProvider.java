@@ -13,6 +13,7 @@ public class DataProvider {
     public List<Person> provide(String fileName) {
         ArrayList<Person> result = new ArrayList<>();
         List<String> personsData = readDataFromFile(fileName);
+
         for (String s : personsData) {
             result.add(mapper.map(s));
         }

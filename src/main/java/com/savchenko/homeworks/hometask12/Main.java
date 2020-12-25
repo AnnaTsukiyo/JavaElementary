@@ -1,6 +1,7 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.HashSet;
+
 import java.util.concurrent.LinkedBlockingDeque;
 
 /**
@@ -12,12 +13,12 @@ import java.util.concurrent.LinkedBlockingDeque;
  * 3) the cat can also take a laxative and remove all mice from the body at once. They are excreted as a substance containing all mice. those. the method must return this substance.
  * The only thing we want to do with this substance in the client code is to find out as quickly as possible whether there is Jerry's mouse with an energy value of 460 kcal among the victims of the cat.
  */
+/**
 
-public class Main {
+ * Rewrite  the previous homework so that the least-calorie mice are digested first
+ **/
 
-    public static void main(String[] args) {
 
-        Cat cat = new Cat();
         LinkedBlockingDeque belly = new LinkedBlockingDeque<>(5);
         Mouse mouse1 = new Mouse("Jerry", 460);
         Mouse mouse2 = new Mouse("Jane", 245);
@@ -27,5 +28,17 @@ public class Main {
         substance.addAll(belly);
         Mouse key = new Mouse("Jerry", 460);
         System.out.println("Substance contains Jerry or not:" + substance.contains(key));
+
+
+        Mouse mouse1 = new Mouse("Jerry", 460);
+        Mouse mouse2 = new Mouse("Jane", 245);
+
+        Mouse mouse1 = new Mouse("Jerry", 460);
+        Mouse mouse2 = new Mouse("Jane", 245);
+
+        cat.eat(mouse1);
+        cat.eat(mouse2);
+
+
     }
 }
