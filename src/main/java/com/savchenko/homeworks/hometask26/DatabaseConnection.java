@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 public class DatabaseConnection {
     protected static Connection initializeDatabase() throws SQLException, ClassNotFoundException {
-        String url = "jdbc:mysql://localhost/";
+        String url = "jdbc:mysql://localhost:3306/";
         String DB_Driver = "com.mysql.jdbc.Driver";
         String DB_User_Name = "root";
         String DB_Password = "password";
