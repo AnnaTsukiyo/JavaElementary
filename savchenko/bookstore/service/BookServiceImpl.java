@@ -6,7 +6,9 @@ import com.savchenko.bookstore.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -26,23 +28,37 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void updateBook(Book book) {
-        bookDao.updateBook(book);
+    public void updateBook(Optional<Book> book) {
+        //bookRepository.updateBook(book);
     }
 
     @Override
     public boolean removeBook(Long id) {
-        return bookDao.removeBook(id);
+        // return bookRepository.removeBook(id);
+        return true;
     }
 
     @Override
-    public Book getBookById(Long id) {
-        return bookDao.getBookById(id);
+    @Transactional
+    public Optional<Book> getBookById(Long id) {
+        return bookRepository.findById(id);
     }
 
     @Override
-    public List<Book> getAllBooks() {
-        return bookDao.getAllBooks();
+    @Transactional
+    public Iterable<Book> getAllBooks() {
+        //   return bookRepository.getAllBooks();
+        return bookRepository.findAll();
+    }
+
+    @Override
+    public Iterable<Book> searchByTitle(String search) {
+        return bookRepository.findBookByTitle("%" + search + "%");
+    }
+
+    @Override
+    public List<Book> findBookByIdIn(List<Long> bookIds) {
+        return bookRepository.findBookByIdIn(bookIds);
     }
 }
 
