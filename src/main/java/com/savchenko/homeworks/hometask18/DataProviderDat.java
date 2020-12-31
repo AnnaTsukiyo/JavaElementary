@@ -12,6 +12,7 @@ public class DataProviderDat implements DataProvider {
     public List<Person> provide(String fileName) {
 
         List<Person> userList = new ArrayList<>();
+
         try {
             FileInputStream fileInputStream = new FileInputStream(".src/test/resources/data.dat");
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);

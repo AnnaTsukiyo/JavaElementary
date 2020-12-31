@@ -1,6 +1,7 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.*;
+
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class Cat {
@@ -19,6 +20,7 @@ public class Cat {
         belly.removeFirst();
         System.out.println("The mouse is removed");
     }
+
 
     private HashSet takingLaxative() {
         substance.addAll(belly);

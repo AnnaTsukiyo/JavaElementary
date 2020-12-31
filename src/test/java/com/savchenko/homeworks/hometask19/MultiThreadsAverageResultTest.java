@@ -4,6 +4,7 @@ import com.savchenko.homeworks.hometask21.Part1.MultiThreadsAverageResult;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Random;
 
 class MultiThreadsAverageResultTest {
@@ -15,9 +16,7 @@ class MultiThreadsAverageResultTest {
     @BeforeAll
     static void setUp() {
         Random random = new Random();
-        for (int i = 0; i < arrayForTest.length; i++) {
-            arrayForTest[i] = random.nextInt(500);
-        }
+        Arrays.stream(arrayForTest).forEach(e-> random.nextInt(500));
     }
 
     @Test
