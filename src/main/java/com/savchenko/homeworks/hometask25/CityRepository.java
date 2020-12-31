@@ -141,3 +141,4 @@ public class CityRepository<City> implements Repository<City> {
         return (City) cities;
     }
 }
+

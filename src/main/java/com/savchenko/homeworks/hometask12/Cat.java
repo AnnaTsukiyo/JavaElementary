@@ -1,6 +1,7 @@
 package com.savchenko.homeworks.hometask12;
 
 import java.util.*;
+
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class Cat {

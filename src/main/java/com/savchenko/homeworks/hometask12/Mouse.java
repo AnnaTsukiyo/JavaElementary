@@ -16,7 +16,6 @@ public class Mouse implements Comparable<Mouse> {
         this.name = name;
         this.numberOfKilocalories = numberOfKilocalories;
     }
-
     @Override
     public int compareTo(Mouse o) {
         return getNumberOfKilocalories() - o.getNumberOfKilocalories();
