@@ -21,7 +21,6 @@ public class Cat {
         System.out.println("The mouse is removed");
     }
 
-
     private HashSet takingLaxative() {
         substance.addAll(belly);
         belly.clear();

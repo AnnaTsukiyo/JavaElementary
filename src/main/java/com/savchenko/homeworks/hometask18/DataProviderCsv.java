@@ -26,7 +26,7 @@ public class DataProviderCsv implements DataProvider {
      //   for (String s : personsData) {
      //       result.add(mapper.map(s));
       //  }
-      
+
         return result;
     }
 }
