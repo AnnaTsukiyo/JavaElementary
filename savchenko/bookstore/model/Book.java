@@ -4,13 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "BOOKS")
 @Data
+
 @NoArgsConstructor
+
 public class Book {
 
     @Id
@@ -28,6 +31,10 @@ public class Book {
     private Author author;
     @Column(name = "YEAR")
     private Long issueYear;
+    @Column(name = "AUTHOR")
+    private String author;
+    @Column(name = "YEAR")
+    private String issueYear;
     @Column(name = "PRICE")
     private BigDecimal price;
 

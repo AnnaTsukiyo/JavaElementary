@@ -19,4 +19,5 @@ public interface BookService {
     Iterable<Book> searchByTitle(String search);
 
     List<Book> findBookByIdIn(List<Long> Ids);
+
 }
