@@ -7,7 +7,8 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 
-public class Mouse {
+public class Mouse implements Comparable<Mouse> {
+
 
     private String name;
     private int numberOfKilocalories;

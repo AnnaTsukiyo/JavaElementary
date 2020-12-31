@@ -19,12 +19,11 @@ public class FractionMyTest {
 
     @MyTest
     static void testEquals() throws ClassNotFoundException {
-
-        Class c = Class.forName("com/savchenko/homeworks/hometask23/FractionMyTest.java");
+        Class c = Class.forName("src/test/java/com/savchenko/homeworks/hometask23/FractionMyTest.java");
         System.out.println(c.toString());
         assertEquals(new FractionNumber(1, 3), fraction1);
         assertEquals(new FractionNumber(2, 3), fraction1);
-        //       assertEquals(new FractionNumber(3, 4), new FractionNumber(1, 4));
+        assertEquals(new FractionNumber(3, 4), new FractionNumber(1, 4));
     }
 
     @MyTest

@@ -7,16 +7,15 @@ package com.savchenko.homeworks.hometask20;
  * A philosopher can only eat when he holds two forks.
  * He takes the forks in turn, first the left, then the right.
  * Write the following algorithm that should lead to a deadlock on one of the iterations:
- * <p>
- * <p>
+ *
  * Take the left fork.
  * Take the right fork.
  * Eat
  * Put the left fork
  * Put the right fork
  * Repeat the algorithm from the beginning
- * <p>
- * I explain:
+ *
+ * //explanation:
  * Philosophers are threads (Runnable accepting 2 forks in the constructor)
  * Forks are resources (objects of the Fork class having take and put methods)
  * I draw your attention to the fact that two philosophers should not be able to simultaneously take one fork
