@@ -19,5 +19,4 @@ public class HelloGreaterImp implements HelloGreater {
     public String printHello() {
         return "Hello, " + userName;
     }
-
 }

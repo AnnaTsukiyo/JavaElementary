@@ -15,6 +15,5 @@ public class BaseController {
     String home() {
         return helloGreater.printHello();
     }
-
 }
 

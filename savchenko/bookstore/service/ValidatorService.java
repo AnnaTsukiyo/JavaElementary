@@ -10,6 +10,5 @@ public class ValidatorService {
         log.info("CREATION Validator Service");
         this.nameOfService = nameOfService;
     }
-
 }
 
